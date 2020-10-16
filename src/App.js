@@ -8,7 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import QuizData from './QuizData';
+
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
 
-    <QuizData />
+    
 
     <Welcome />
 
