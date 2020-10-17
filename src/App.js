@@ -18,19 +18,19 @@ function App() {
   return (
     <>
 
-    
-
-    <Welcome />
 
 
+      <Welcome />
 
-<Router path='/mainquiz'>
-    <Switch>
-      <MainQuiz />
-    </Switch>
-  </Router>
 
-</>
+
+
+      <Router path='/mainquiz'>
+        <Switch>
+          <MainQuiz />
+        </Switch>
+      </Router>
+    </>
 
 
   );
