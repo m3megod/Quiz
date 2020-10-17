@@ -28,19 +28,6 @@ class MainQuiz extends Component {
 
     }
 
-    // componentDidMount() {
-    //     fetch('https://opentdb.com/api.php?amount=5&category=21&difficulty=easy')
-    //         .then(res => res.json())
-    //         .then(json => this.setState({
-    //             items: json.results
-    //         }))
-
-    //     .then();
-
-
-    // }
-
-
     loadQuiz = () => {
         const { items } = this.state
         const { currentIndex } = this.state;
