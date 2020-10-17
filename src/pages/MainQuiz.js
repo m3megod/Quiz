@@ -66,11 +66,6 @@ class MainQuiz extends Component {
                 score: score + 1
             })
         }
-
-
-
-
-
         this.setState({
             currentIndex: this.state.currentIndex + 1,
             userAnswer: null,
@@ -103,6 +98,15 @@ class MainQuiz extends Component {
 
     }
 
+    finishHandler = () => {
+        if (this.state.currentIndex === QuizData.length - 1) {
+            this.setState({
+                quizEnd: true,
+            })
+        }
+    }
+
+    
 
     render() {
 
@@ -112,6 +116,22 @@ class MainQuiz extends Component {
         const wrong = QuizData[currentIndex].incorrect_answers
         const correct = QuizData[currentIndex].correct_answer
 
+        if (quizEnd) {
+            return (
+                <div>
+                    <h1>
+                        Game Over. Final score is {this.state.score} points
+                    </h1>
+                    <p>
+                        
+                    </p>
+                    <button onClick={this.resetHandler}>
+                        Reset
+                    </button>
+                </div>
+            )
+
+        }
 
         return (
             <>
